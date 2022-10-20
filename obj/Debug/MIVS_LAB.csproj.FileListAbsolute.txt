@@ -1,0 +1,12 @@
+D:\GitRepos\MIVS_LAB\bin\Debug\MIVS_LAB.exe.config
+D:\GitRepos\MIVS_LAB\bin\Debug\MIVS_LAB.exe
+D:\GitRepos\MIVS_LAB\bin\Debug\MIVS_LAB.pdb
+D:\GitRepos\MIVS_LAB\obj\Debug\MIVS_LAB.csproj.AssemblyReference.cache
+D:\GitRepos\MIVS_LAB\obj\Debug\MIVS_LAB.csproj.SuggestedBindingRedirects.cache
+D:\GitRepos\MIVS_LAB\obj\Debug\MIVS_LAB.Form1.resources
+D:\GitRepos\MIVS_LAB\obj\Debug\MIVS_LAB.Properties.Resources.resources
+D:\GitRepos\MIVS_LAB\obj\Debug\MIVS_LAB.csproj.GenerateResource.cache
+D:\GitRepos\MIVS_LAB\obj\Debug\MIVS_LAB.csproj.CoreCompileInputs.cache
+D:\GitRepos\MIVS_LAB\obj\Debug\MIVS_LAB.exe
+D:\GitRepos\MIVS_LAB\obj\Debug\MIVS_LAB.pdb
+D:\GitRepos\MIVS_LAB\obj\Debug\MIVS_LAB.TaskForm.resources
