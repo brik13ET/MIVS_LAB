@@ -30,17 +30,6 @@ namespace MIVS_LAB
             return a + rgen.NextDouble() * (b - a);
         }
 
-        private double NormDist(float micro, float D, float X)
-        {
-            double S = 0;
-            double w = Math.Sqrt(D);
-            for (int i = 0; i < m * m; i++)
-            {
-                S += X;
-            }
-            return (S - micro * m * m) / Math.Sqrt(m * m * D);
-        }
-
         private double NormDist(float micro, float D)
         {
             double S = 0;
@@ -57,14 +46,14 @@ namespace MIVS_LAB
             float[] x = new float[m];
             for (int i = 0; i < m; i++)
             {
-                x[i] = (float)NormDist(0, 1);
+                x[i] = (float)NormDist(0, 1)-6;
             }
             double sq_sum = 0;
             for (int i = 1; i < m; i++)
             {
                 sq_sum = x[i] * x[i];
             }
-            return x[0] * Math.Sqrt(m) / (Math.Sqrt(sq_sum / m));
+            return 12 + Math.Sqrt(6) + x[0] * Math.Sqrt(m) / (Math.Sqrt(sq_sum / m));
         }
 
         private float[] grid(float from, float to, int count)
@@ -108,14 +97,14 @@ namespace MIVS_LAB
             System.Array.Sort(a);
             for (int i = 0; i < N; i++)
             {
-                if (a[i] < gr[0])
+                if (a[i] <= gr[0])
                     cnt[0]++;
                 else if (a[i] >= gr[n - 1])
                     cnt[n - 1]++;
                 else
                 {
                     int gr_i = 1;
-                    while (a[i] >= gr[gr_i] || a[i] < gr[gr_i - 1])
+                    while (a[i] > gr[gr_i] || a[i] < gr[gr_i - 1])
                         gr_i++;
                     cnt[gr_i]++;
                 }
@@ -136,13 +125,13 @@ namespace MIVS_LAB
             double hi2_sum = 0;
             for (int i = 0; i < n; i++)
             {
-                hi2_sum += (cnt[i]* cnt[i]) * n / N;
+                hi2_sum += cnt[i] * cnt[i];
             }
-            double hi2 = n * hi2_sum / N;
+            double hi2 = n * hi2_sum / (N ) - N;
             if (hi2 < y0)
                 label2.Text = ("Гипотеза принята (alpha = 0.05, [n-1] = 14, hi^2 = " + hi2 + ").");
             else
-                label2.Text = ("hi ^ 2 = " + hi2 + ").");
+                label2.Text = ("hi ^ 2 = " + hi2);
 
 
             chart1.Invalidate();
